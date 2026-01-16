@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · NEXAUTH{% endblock %}
+
+{% block body %}
+<div class="dash-layout">
+
+    <aside class="sidebar">
+        <a href="/dashboard" class="active">Dashboard</a>
+        <a href="/update">Update Profile</a>
+        <a href="/logout">Logout</a>
+        <a href="/delete" class="danger">Delete Account</a>
+    </aside>
+
+    <main class="dash-content">
+        <div class="glass-card">
+            <h2>Hello, {{ user.username }}</h2>
+            <p><b>User ID:</b> {{ user.id }}</p>
+            <p><b>Status:</b> Authenticated ✅</p>
+        </div>
+    </main>
+
+</div>
+{% endblock %}

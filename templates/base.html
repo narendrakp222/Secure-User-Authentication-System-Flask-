@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}NEXAUTH{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header class="topbar">
+    <div class="brand">
+        <span class="logo">NEX</span><span class="logo-accent">AUTH</span>
+    </div>
+    {% if user %}
+        <div class="user-chip">{{ user.username }}</div>
+    {% endif %}
+</header>
+
+{% block body %}{% endblock %}
+
+</body>
+</html>

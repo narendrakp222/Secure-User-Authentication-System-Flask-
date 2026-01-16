@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Register · NEXAUTH{% endblock %}
+
+{% block body %}
+<div class="auth-wrapper">
+    <div class="auth-card">
+        <h1>Create Account</h1>
+        <p class="sub">Start your secure journey</p>
+
+        <form method="post" action="/signup">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        {% if e %}
+            <div class="error">{{ e }}</div>
+        {% endif %}
+
+        <p class="switch">Already registered? <a href="/">Login</a></p>
+    </div>
+</div>
+{% endblock %}

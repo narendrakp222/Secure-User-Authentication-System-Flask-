@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Update Profile · NEXAUTH{% endblock %}
+
+{% block body %}
+<div class="dash-layout">
+    <aside class="sidebar">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/update" class="active">Update Profile</a>
+        <a href="/logout">Logout</a>
+    </aside>
+
+    <main class="dash-content">
+        <div class="glass-card">
+            <h2>Update Profile</h2>
+
+            <form method="post">
+                <input type="text" name="username" value="{{ user.username }}" required>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </main>
+</div>
+{% endblock %}
